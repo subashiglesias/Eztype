@@ -1,0 +1,10 @@
+version: 1.0.12
+files:
+  - url: EZtype-1.0.12-mac.zip
+    sha512: 0/Um3N9QwL9kWNUl0Mq33MODRWf7uAn3WqbSnmagfi9JG0R2JAJnGhv6bh/e82aKUks4O5NVrDQ/Nv+7iuZK4g==
+  - url: EZtype-1.0.12.dmg
+    sha512: H9gsFteHPEdn0gxqfHzUxXFmM5qSLszdKbuKFmDIWrfzy2VEt4BfjpXAy+tvYUifnUyxJYFith2iD/raL5Tt7A==
+    size: 54049868
+path: EZtype-1.0.12-mac.zip
+sha512: 0/Um3N9QwL9kWNUl0Mq33MODRWf7uAn3WqbSnmagfi9JG0R2JAJnGhv6bh/e82aKUks4O5NVrDQ/Nv+7iuZK4g==
+releaseDate: '2018-06-25T13:45:10.927Z'
