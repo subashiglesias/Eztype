@@ -1756,7 +1756,7 @@
                                                 )
                                                 await cancel_checkout
                                                     (
-                                                        fileEntryId
+                                                        fileEntryID
                                                     )
 
                                                 //                           addFileToCompleted
@@ -2208,7 +2208,7 @@
 
                                                 await cancel_checkout
                                                     (
-                                                        fileEntryId
+                                                        fileEntryID
                                                     )
 
                                                 fse.emptyDir(
@@ -2891,6 +2891,7 @@
                         $(container).append("<div class='content_list_right'>" +
                             "<span>" + "Rsync copy failed ." + "</span>" +
                             "</div>");
+                        return reject("done")
                     }
 
 
@@ -3021,7 +3022,7 @@
 
             clearTimeout(
                 timer);
-            startpenstuck();
+                setTimeout(startpen,5000);
             return;
         }
 
@@ -3224,7 +3225,7 @@
         }
 
         function cancel_checkout(fileEntryId) {
-            var tmpCC = URL_cancelCheckout + fileEntryID;
+            var tmpCC = URL_cancelCheckout + fileEntryId;
             console.log(JSON.stringify(tmpCC))
             var optionsCC = {
                 method: 'POST',
@@ -3247,7 +3248,7 @@
                         // POST succeeded...
                         //   console.log(JSON.parse(response.body))
                         if (response.body.match("exception")) {
-                            gotonextfile();
+                          //  gotonextfile();
                             return reject("exception")
                         }
                         var currentCC = JSON.parse(response.body)
@@ -3262,7 +3263,7 @@
                             "", ezTypeUserID, filename + " " + display +
                             "Cancel checkout failed. But the file is completed. Kindly cancel checkout manually if it is not Locked",
                             false, statusfileuserID);
-                        gotonextfile(); //Need to work on error - process completed but no checkout??
+                        //gotonextfile(); //Need to work on error - process completed but no checkout??
                         return reject(err);
                     });
             })
